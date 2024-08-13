@@ -1,0 +1,166 @@
+/*/By Demian Fontanot*/
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+body {
+    padding: 90px 20px 0px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #072f63, #eb0ac5);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+.lista-canciones-css {
+    list-style: none;
+}
+
+h1 {
+    color: aliceblue;
+}
+img {
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    transition: transform 0.3s; 
+    box-shadow:  27px 27px 64px #9d1083,
+             -27px -27px 64px #d516b1;
+             
+}
+
+img:hover {
+    transform: translateY(-100px); /* Desplaza la imagen hacia arriba 10 píxeles al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px 20px 0;
+    }
+
+    h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+
+    img {
+        max-width: 100%; /* Imágenes redimensionables para pantallas pequeñas */
+    }
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: #0769e9;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+.nav-link{
+    color: white;
+    text-decoration:none ;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 35px;
+    line-height: 80px;
+    
+}
+.nav-menu{
+    border-radius: 12px;
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+
+}
+.nav-menu-link:hover,
+.nav-menu-link_active{
+    background-color: #034574;
+    transition: 0.5s;
+
+}
+.nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px ;
+    line-height: 60px;
+
+    display: none;
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px 20px 0; 
+    }
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #2c3e50;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+}
